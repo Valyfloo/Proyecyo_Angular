@@ -1,0 +1,26 @@
+<div class="container">
+  <h3>Lista de Productos</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Categoría</th>
+        <th>Imagen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td>{{ producto.precio }}</td>
+        <td>{{ producto.categoria }}</td>
+        <td>{{ producto.imagen }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Botón para exportar a Excel -->
+  <button (click)="exportarAExcel()" class="btn btn-success">Descargar Excel</button>
+</div>

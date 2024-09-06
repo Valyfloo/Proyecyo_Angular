@@ -1,0 +1,47 @@
+<header class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Mi Aplicación de Productos</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" >Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/productos" >Productos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/usuarios">Usuarios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/tabla-usuarios">Tabla Usuarios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/tabla-productos">Tabla Productos</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main class="container mt-4">
+  <h2>INICIO</h2>
+  <section class="jumbotron text-center bg-light p-4">
+    <div class="container">
+      <h1 class="display-4">Bienvenido a Mi Aplicación de Productos</h1>
+      <p class="lead">Esta aplicación te permite gestionar y visualizar productos de manera sencilla y eficiente. Explora nuestras funcionalidades y descubre cómo podemos ayudarte a optimizar tu gestión de productos.</p>
+
+   
+ 
+    </div>
+  </section>
+
+  <router-outlet></router-outlet>
+  <!-- Sección Informativa -->
+  <section class="jumbotron text-center bg-light p-4">
+    <div class="container">
+     
+      <p>Puedes comenzar navegando por las secciones de productos y usuarios usando el menú superior.</p>
+   
+    </div>
+  </section>
+
+ 
+</main>

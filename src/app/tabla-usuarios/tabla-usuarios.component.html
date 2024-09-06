@@ -1,0 +1,23 @@
+<div class="container">
+    <h3>Lista de Usuarios</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Correo Electrónico</th>
+          <th>Rol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{ usuario.nombre }}</td>
+          <td>{{ usuario.email }}</td>
+          <td>{{ usuario.rol }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Botón para exportar a Excel -->
+    <button (click)="exportarAExcel()" class="btn btn-success">Descargar Excel</button>
+  </div>
+  

@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="card mt-4">
+    <div class="card-header">
+      <h3>Registro de Producto</h3>
+    </div>
+    <div class="card-body">
+      <form #formulario="ngForm" (ngSubmit)="guardarProducto(formulario)">
+        <div class="form-group">
+          <label for="nombre">Nombre del Producto:</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required ngModel>
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion">Descripción:</label>
+          <textarea class="form-control" id="descripcion" name="descripcion" rows="4" required ngModel></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="precio">Precio:</label>
+          <input type="number" class="form-control" id="precio" name="precio" required ngModel>
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoría:</label>
+          <select class="form-control" id="categoria" name="categoria" required ngModel>
+            <option value="electronica">Electrónica</option>
+            <option value="ropa">Ropa</option>
+            <option value="hogar">Hogar</option>
+            <option value="juguetes">Juguetes</option>
+          </select>
+        </div>
+
+         <!-- Botón para cargar archivo Excel -->
+         <div class="form-group">
+          <label for="fileInput">Cargar archivo Excel:</label>
+          <input type="file" id="fileInput" (change)="onFileChange($event)" accept=".xlsx, .xls">
+        </div>
+
+        <div class="form-group">
+          <label for="imagen">Imagen del Producto:</label>
+          <input type="file" class="form-control-file" id="imagen" name="imagen" required ngModel>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar Producto</button>
+      </form>
+    </div>
+  </div>
+</div>
