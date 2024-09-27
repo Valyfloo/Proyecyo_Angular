@@ -1,0 +1,45 @@
+.personajes-background {
+  background-image: url('https://wallpapers.com/images/featured/rick-and-morty-cool-t3ynu5ly9m7jq6e2.jpg'); /* URL del fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Hace que el fondo permanezca fijo mientras se desplaza */
+  min-height: 100vh; /* El fondo cubre al menos la altura completa de la ventana */
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para el contenido */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efecto de zoom al hacer hover */
+}
+
+.card-img-top {
+  max-height: 200px; /* Limita la altura de la imagen */
+  object-fit: cover; /* Evita que la imagen se deforme */
+  width: 100%; /* Asegura que la imagen ocupe el ancho completo de la tarjeta */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+/* Estilo para el personaje único */
+.personaje-unico .card-img-top {
+  max-height: 200px; /* Limita la altura de la imagen para el personaje único */
+  object-fit: cover;
+}

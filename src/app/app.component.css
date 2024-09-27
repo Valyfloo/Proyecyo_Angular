@@ -1,0 +1,57 @@
+/* Hacer que el header se quede fijo en la parte superior */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra para que destaque */
+  }
+  
+  /* Asegura que el contenido no se superponga al header */
+  main {
+    margin-top: 70px; /* Ajusta el margen superior para dejar espacio para el header */
+  }
+  
+  /* Ajuste de estilo para las tarjetas */
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    max-height: 250px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+  }
+  
+  /* Mantener el fondo fijo mientras se desplaza */
+  body {
+    background-image: url('https://wallpapers.com/images/featured/rick-and-morty-cool-t3ynu5ly9m7jq6e2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,49 @@
+.personajes-background {
+    background-image: url('https://wallpapers.com/images/featured/rick-and-morty-cool-t3ynu5ly9m7jq6e2.jpg'); /* URL del fondo */
+    background-size: cover; /* Cubrir todo el fondo */
+    background-position: center; /* Centrar la imagen de fondo */
+    background-repeat: no-repeat; /* No repetir la imagen de fondo */
+    background-attachment: fixed; /* Mantener el fondo fijo */
+    min-height: 100vh; /* El fondo cubre al menos la altura completa de la ventana */
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco semi-transparente para el contenido */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center; /* Centrar el texto dentro del contenedor */
+  }
+  
+  .btn {
+    margin-top: 20px; /* Espacio superior para separar el botón del contenido anterior */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    font-size: 1rem; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
+  
+
+h2 {
+  font-size: 2rem; /* Tamaño de fuente para el título */
+  color: #333; /* Color del texto del título */
+}
+
+h3 {
+  font-size: 1.5rem; /* Tamaño de fuente para los subtítulos */
+  color: #555; /* Color del texto de los subtítulos */
+}
+
+p {
+  font-size: 1rem; /* Tamaño de fuente para los párrafos */
+  color: #666; /* Color del texto de los párrafos */
+}
+
+ul {
+  list-style-type: none; /* Quitar el estilo de lista */
+  padding: 0; /* Eliminar el padding */
+  margin: 0; /* Eliminar el margen */
+}
+
+li {
+  margin: 5px 0; /* Espacio entre los elementos de la lista */
+}

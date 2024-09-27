@@ -9,7 +9,11 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { TablaUsuariosComponent } from './tabla-usuarios/tabla-usuarios.component';
 import { TablaProductosComponent } from './tabla-productos/tabla-productos.component';
 import { ProductoService } from './producto.service'; // Importa el servicio de productos
-import { UsuarioService } from './usuario.service'; // Importa el servicio de usuarios
+import { UsuarioService } from './usuario.service';
+import { PersonajesComponent } from './personajes/personajes.component'; // Importa el servicio de usuarios
+import { HttpClientModule } from '@angular/common/http';
+import { EpisodiosComponent } from './episodios/episodios.component';
+import { DetallePersonajeComponent } from './detalle-personaje/detalle-personaje.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,16 @@ import { UsuarioService } from './usuario.service'; // Importa el servicio de us
     ProductoComponent,
     UsuarioComponent,
     TablaUsuariosComponent,
-    TablaProductosComponent
+    TablaProductosComponent,
+    PersonajesComponent,
+    EpisodiosComponent,
+    DetallePersonajeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [ProductoService, UsuarioService], // Registra los servicios
   bootstrap: [AppComponent]

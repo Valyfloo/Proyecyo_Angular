@@ -1,0 +1,17 @@
+<div class="personajes-background">
+    <div class="container mt-4">
+      <div *ngIf="personaje">
+        <h2>{{ personaje.name }}</h2>
+        <img [src]="personaje.image" alt="{{ personaje.name }}" class="personaje-img">
+        <p>Status: {{ personaje.status }}</p>
+        <p>Especie: {{ personaje.species }}</p>
+        <p>Género: {{ personaje.gender }}</p>
+        <h3>Episodios:</h3>
+        <ul>
+          <li *ngFor="let episode of personaje.episode">{{ episode }}</li>
+        </ul>
+        <button class="btn btn-primary" [routerLink]="['/personajes']">Regresar</button>
+      </div>
+    </div>
+  </div>
+  
