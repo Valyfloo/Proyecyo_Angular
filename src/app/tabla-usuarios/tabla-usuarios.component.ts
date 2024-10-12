@@ -9,20 +9,36 @@ import * as XLSX from 'xlsx'; // Importar el módulo para trabajar con archivos 
 })
 export class TablaUsuariosComponent {
   usuarios: any[] = []; // Arreglo para almacenar los usuarios
+  usuarioEditado: any = {}; // Objeto para almacenar el usuario que se va a editar
+  indexEditado: number | null = null; // Índice del usuario que se va a editar
 
   constructor(private usuarioService: UsuarioService) {
     this.usuarios = this.usuarioService.obtenerUsuarios(); // Obtener usuarios del servicio
   }
 
   exportarAExcel() {
-    // Crear una hoja de trabajo (worksheet) a partir de los usuarios
     const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.usuarios);
-
-    // Crear un libro de trabajo (workbook) que contenga la hoja
     const wb: XLSX.WorkBook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Usuarios');
-
-    // Exportar el libro de trabajo a un archivo Excel
     XLSX.writeFile(wb, 'usuarios.xlsx');
+  }
+
+  eliminarUsuario(index: number) {
+    this.usuarioService.eliminarUsuario(index);
+    this.usuarios = this.usuarioService.obtenerUsuarios(); // Actualiza la lista de usuarios
+  }
+
+  iniciarEdicion(usuario: any, index: number) {
+    this.usuarioEditado = { ...usuario }; // Copia el usuario a editar
+    this.indexEditado = index; // Guarda el índice del usuario a editar
+  }
+
+  guardarCambios() {
+    if (this.indexEditado !== null) {
+      this.usuarioService.modificarUsuario(this.indexEditado, this.usuarioEditado);
+      this.usuarios = this.usuarioService.obtenerUsuarios(); // Actualiza la lista de usuarios
+      this.usuarioEditado = {}; // Resetea el objeto de usuario editado
+      this.indexEditado = null; // Resetea el índice editado
+    }
   }
 }

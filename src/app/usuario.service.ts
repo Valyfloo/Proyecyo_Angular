@@ -13,4 +13,12 @@ export class UsuarioService {
   obtenerUsuarios() {
     return this.usuarios;
   }
+
+  eliminarUsuario(index: number) {
+    this.usuarios.splice(index, 1); // Elimina el usuario en la posición indicada
+  }
+
+  modificarUsuario(index: number, usuario: any) {
+    this.usuarios[index] = usuario; // Modifica el usuario en la posición indicada
+  }
 }
